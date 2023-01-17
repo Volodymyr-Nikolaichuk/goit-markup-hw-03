@@ -1,0 +1,196 @@
+:root {
+  --primary-brand:#4D5AE5;
+  --pressed-state:#404BBF;
+  --dark:#2E2F42;
+  --success:#31D0AA;
+  --text:#434455;
+  --subtle-text:#8E8F99;
+  --accent:#E7E9FC;
+  --light:#F4F4FD;
+  --modal-overlay:#2E2F42;
+  --hero-background:#2E2F42;
+
+  --bacground-color:#E5E5E5;
+  --background-cards:#FFFFFF;
+}
+
+body {
+  background-color: var(--background-cards);
+  color: var(--dark);
+  font-family: Roboto, sans-serif;
+}
+ul {
+ list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+}
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.header { 
+}
+.logo {
+  color: var(--dark);
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.web-logo {
+  color: var(--primary-brand);
+  }
+.site-nav {
+}
+.link-nav {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.link {
+  color: inherit;
+}
+.link-nav:hover,
+.link-nav:focus {
+  color: var(--pressed-state);
+}
+.portfolio,
+.studio {
+  color: var(--pressed-state);
+}
+.link-contact {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.hero {
+  background-color: var(--hero-background);
+  text-align: center;
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color:var(--background-cards);
+}
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  letter-spacing: 0.04em;
+}
+.hero-button {
+  color: var(--background-cards);
+  background: var(--primary-brand);
+}
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--pressed-state);
+}
+.button-filter {
+  background-color: var(--light);
+  color: var(--primary-brand);
+}
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--pressed-state);
+  color: var(--background-cards);
+}
+
+.invisible-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.second-title {
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.benefits-list {
+}
+.ben-title {
+}
+.ben-text {
+}
+.solution-list {
+}
+.second-title {
+}
+.print-img {
+}
+.style-img {
+}
+.design-img {
+}
+.our-team {
+  background-color: var(--light);
+}
+.our-team .list-item{
+  background-color: var(--background-cards);
+}
+.pre-title,
+.body-team {
+  text-align: center;
+}
+.project-title {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.button {
+
+}
+
+.pre-title {
+}
+.team {
+}
+.descript {
+}
+.footer {
+  background-color: var(--dark);
+}
+.logo-footer {
+  color: var(--light);
+}
+.body-footer {
+  color: var(--accent);
+}
+.adress-footer {
+}
