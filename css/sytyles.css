@@ -1,17 +1,35 @@
 :root {
-  --primary-brand:#4D5AE5;
-  --pressed-state:#404BBF;
-  --dark:#2E2F42;
-  --success:#31D0AA;
-  --text:#434455;
-  --subtle-text:#8E8F99;
-  --accent:#E7E9FC;
-  --light:#F4F4FD;
-  --modal-overlay:#2E2F42;
-  --hero-background:#2E2F42;
+  --primary-brand: #4d5ae5;
+  --pressed-state: #404bbf;
+  --dark: #2e2f42;
+  --success: #31d0aa;
+  --text: #434455;
+  --subtle-text: #8e8f99;
+  --accent: #e7e9fc;
+  --light: #f4f4fd;
+  --modal-overlay: #2e2f42;
+  --hero-background: #2e2f42;
 
-  --bacground-color:#E5E5E5;
-  --background-cards:#FFFFFF;
+  --bacground-color: #e5e5e5;
+  --background-cards: #ffffff;
+  --hero-shadow: rgba(0, 0, 0, 0.15);
+  --shadow-button-filter: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset CSS */
+h1,
+h2,
+h3,
+p {
+  margin-top: 0px;
+  padding-top: 0;
 }
 
 body {
@@ -19,24 +37,31 @@ body {
   color: var(--dark);
   font-family: Roboto, sans-serif;
 }
+
 ul {
- list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
 }
+
 h3 {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
+
 p {
   font-weight: 400;
   font-size: 16px;
@@ -44,9 +69,53 @@ p {
   letter-spacing: 0.02em;
   color: var(--text);
 }
-.header { 
+
+.link {
+  color: inherit;
 }
+
+/* Обов'язково необхідно прибирати крайні MARGIN
+крайніх елементів рядка чи стовпчка. 
+Для цього можна використати (наприклад):
+.site-nav .item:not( : first-child) {
+  margin-right: 40px;
+}
+або
+.site-nav .item + .item {
+  margin-right: 40px;
+}
+Це дасть всім елементам (дітям) правий відступ 
+окрім першого
+  */
+
+.container {
+  outline: 1px dashed #31d0aa;
+}
+
+.section {
+  outline: 1px dashed tomato;
+}
+
+.page-header {
+  background-color: var(--background-cards);
+  border-bottom: 1px solid var(--accent);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1158px;
+}
+
+/* .page-header .container {
+  margin-bottom: 0;
+} */
+
 .logo {
+  margin-right: 76px;
+
   color: var(--dark);
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -57,45 +126,86 @@ p {
 }
 .web-logo {
   color: var(--primary-brand);
-  }
-.site-nav {
 }
-.link-nav {
-  color: var(--dark);
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.link {
-  color: inherit;
+
+.adress-header {
+  display: flex;
+  justify-content: flex-end;
 }
-.link-nav:hover,
-.link-nav:focus {
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav .list-item:not(:first-child),
+.adress-header .list-item:not(:first-child) {
+  margin-left: 40px;
+}
+
+.nav .link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav .link:hover,
+.nav .link:focus {
   color: var(--pressed-state);
 }
+
+.link.contact:hover,
+.link.contact:focus {
+  color: var(--pressed-state);
+}
+
 .portfolio,
 .studio {
   color: var(--pressed-state);
 }
-.link-contact {
+
+.link.contact {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
 }
+
 .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+
   background-color: var(--hero-background);
   text-align: center;
 }
+
 .hero-title {
+  margin-bottom: 48px;
+
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color:var(--background-cards);
+  color: var(--background-cards);
 }
+
 .button {
   font-family: inherit;
   font-weight: 500;
@@ -104,22 +214,56 @@ p {
   align-items: center;
   letter-spacing: 0.04em;
 }
+
 .hero-button {
+  display: inline-block;
+  min-height: 56px;
+  min-width: 168px;
+  padding: 16px 32px;
+  border: 0;
+  border-radius: 4px;
+
   color: var(--background-cards);
   background: var(--primary-brand);
+  box-shadow: 0px 4px 4px var(--hero-shadow);
 }
+
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--pressed-state);
 }
-.button-filter {
-  background-color: var(--light);
-  color: var(--primary-brand);
+
+.benefits .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
-.button-filter:hover,
-.button-filter:focus {
-  background-color: var(--pressed-state);
-  color: var(--background-cards);
+
+.list-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-list .list-item {
+  width: 264px;
+}
+
+.benefits-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+/* .benefits-list .list-item:not(:last-child) {
+  margin-right: 24px;
+} */
+
+.benefits .ben-title {
+  margin-bottom: 8px;
+}
+
+.benefits-list .body {
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .invisible-title {
@@ -135,62 +279,184 @@ p {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.solution-list .list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.solution-list .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 32px;
+}
+
+.list.img {
+  margin-right: auto;
+}
+
 .second-title {
-  text-align: center;
+  margin-bottom: 72px;
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-.benefits-list {
+
+.solution-list .container {
+  padding-bottom: 120px;
 }
-.ben-title {
-}
-.ben-text {
-}
-.solution-list {
-}
-.second-title {
-}
-.print-img {
-}
-.style-img {
-}
-.design-img {
-}
+
 .our-team {
   background-color: var(--light);
 }
-.our-team .list-item{
-  background-color: var(--background-cards);
-}
-.pre-title,
-.body-team {
+
+.our-team .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   text-align: center;
 }
+
+.our-team .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+}
+
+.our-team .list-item {
+  padding-top: 32;
+  padding-bottom: 32px;
+
+  background-color: var(--background-cards);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.our-team .card-content {
+  border: 0px;
+}
+
+.photo.team {
+  display: block;
+}
+
+.pre-title {
+  padding-top: 32px;
+  margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.body {
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.filter.container {
+  padding: 96px 15px 76px 15px;
+}
+
+.button-filter {
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 12px 24px;
+  height: 48px;
+
+  background-color: var(--light);
+  color: var(--primary-brand);
+  box-shadow: var(--shadow-button-filter);
+}
+
+.button-filter:hover,
+.button-filter:focus {
+  background-color: var(--pressed-state);
+  color: var(--background-cards);
+  border: 1px solid transparent;
+}
+
+.filter .list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* .filter .item:not( :first-child) {
+  margin-left: 24px;
+} */
+
 .project-title {
+  padding-top: 32px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
-.button {
 
+.product-img {
+  display: block;
 }
 
-.pre-title {
+.projects .container {
+  padding-bottom: 120px;
 }
-.team {
+
+.card-content {
+  border: 1px solid var(--accent);
+  border-top: 0;
 }
-.descript {
+
+.products.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  row-gap: 48px;
 }
+
+/* .card {
+  width: 360px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.card:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.card:nth-last-child(-n + 3) {
+  margin-bottom: 120px;
+} */
+
+.projects .card-content {
+  padding-left: 16px;
+  padding-bottom: 32px;
+}
+
 .footer {
+  padding: 100px 0px;
+
   background-color: var(--dark);
 }
+
 .logo-footer {
+  margin-bottom: 16px;
+
   color: var(--light);
 }
+
 .body-footer {
+  margin-top: 16px;
+  width: 264px;
+
   color: var(--accent);
-}
-.adress-footer {
 }
